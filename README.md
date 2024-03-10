@@ -18,10 +18,10 @@ As we see in thea above diagram, when the antennas are omnidirectional, this cre
 ## Solving With Movement
 Introducing motion is one solution this problem. Either the target, the array or both can be moving. 
 
-**Important Caveat 1**
+### Important Caveat 1
 If both the array baseline remains on the same course and the target remains at the same relative heading; motion disambiguation will be impossible. 
 
-**Important Caveat 2**
+### Important Caveat 2
 A global direction frame needs to be know for this to work. In these examples it is true north (although could be magnetic, with sufficient compensation). In a system using movement for disambiguation, a heading reference of sufficient speed and quality would be required. 
 
 ## Example
@@ -37,12 +37,16 @@ In the above screen capture we have the following:
   - The arrows dynamically scale to the "certainty" of the algorithm.
   - If the arrows are equal length, the algorithm is unable to determine the true bearing
 
+
+![](img/moving-target.gif)
+And an example with a moving target
+
 ## So How Does This Work?
 ![](img/with-north-tags.gif)
 
 - By comparing the real angle and the ambiguous angle against the array true heading (North in this case) we can see the following
-  - The `Real Bearing-North Angle` varies fairly little
-  - The `Ambiguous Bearing-North Angle` varies hugely 
+  - The `Real Bearing/North Angle` varies fairly little
+  - The `Ambiguous Bearing/North Angle` varies hugely 
 - By putting these angles into a rolling buffer we can then run basic statistics on them. In this case we look at the standard deviation of all the buffer and pick the one that has least deviation. 
 
 #### Extra Points
