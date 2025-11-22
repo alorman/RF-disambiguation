@@ -2,12 +2,14 @@
 This work was derived some work projects I've worked on at various times both in sonar and radar. The concepts are the same. I wanted to consolidate my notes and mess around with relative target and sensor motion in a graphical environment. 
 
 
-## What is Ambiguous Bearing
+## What is Ambiguous Bearing?
 In all uniform line arrays (ULA); angle can be determined fairly preciesly, it manifest as both **true angle** and **ambiguous angle**. This is a facet of the sensor type and is not unique to any particular domain (sonar, radar etc...)  
 
 ![](img/ula-broadside.png) 
 
-In the above image of a conventional transmitting phased array ([source link])https://www.researchgate.net/figure/Structure-of-a-uniform-linear-array-ULA-with-analog-beamforming-using-phase-shifters_fig1_316921399) ) we can see that a signal has a specific angle relativel to the beam of the array (left-right on the screen). Since the antennas are implied to be directional, the image somehwat simplifies the issue. If the antennas were omnidirectional, there would exist another possibility of the signal being mirror across the array. 
+![](img/ULA-ambig.svg)
+
+In the above image of a conventional transmitting phased array [source link](https://www.researchgate.net/figure/Structure-of-a-uniform-linear-array-ULA-with-analog-beamforming-using-phase-shifters_fig1_316921399) we can see that a signal has a specific angle relativel to the beam of the array (left-right on the screen). Since the antennas are implied to be directional, the image somehwat simplifies the issue. If the antennas were omnidirectional, there would exist another possibility of the signal being mirror across the array. 
 
 ![](ULA-ambig.svg)
 
